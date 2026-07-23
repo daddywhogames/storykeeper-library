@@ -3,9 +3,9 @@ set -eu
 
 export PATH="/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-LIBRARY="/Users/djstd/Documents/Openclaw/storykeeper-library"
-QUEUE="/Users/djstd/Documents/Openclaw/storykeeper-workspace/data/publication-queue"
-PUBLISHED="/Users/djstd/Documents/Openclaw/storykeeper-workspace/data/publication-published"
+LIBRARY="${STORYKEEPER_LIBRARY:-/Users/djstd/Documents/Openclaw/storykeeper-library}"
+QUEUE="${STORYKEEPER_QUEUE:-/Users/djstd/Documents/Openclaw/storykeeper-workspace/data/publication-queue}"
+PUBLISHED="${STORYKEEPER_PUBLISHED:-/Users/djstd/Documents/Openclaw/storykeeper-workspace/data/publication-published}"
 LOCK="/private/tmp/storykeeper-library-publisher.lock"
 
 if ! mkdir "$LOCK" 2>/dev/null; then
@@ -20,6 +20,7 @@ if (( ${#queued[@]} == 0 )); then
 fi
 
 cd "$LIBRARY"
+git pull --ff-only origin main
 node scripts/import-queue.mjs "$QUEUE" "$LIBRARY/content/stories"
 npm run check
 npm run build

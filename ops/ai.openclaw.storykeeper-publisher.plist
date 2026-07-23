@@ -6,8 +6,17 @@
   <string>ai.openclaw.storykeeper-publisher</string>
   <key>ProgramArguments</key>
   <array>
-    <string>/Users/djstd/Documents/Openclaw/storykeeper-library/ops/publish-queue.sh</string>
+    <string>/Users/djstd/.openclaw/storykeeper-library-runtime/ops/publish-queue.sh</string>
   </array>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>STORYKEEPER_LIBRARY</key>
+    <string>/Users/djstd/.openclaw/storykeeper-library-runtime</string>
+    <key>STORYKEEPER_QUEUE</key>
+    <string>/Users/djstd/.openclaw/workspace-storyteller/data/publication-queue</string>
+    <key>STORYKEEPER_PUBLISHED</key>
+    <string>/Users/djstd/.openclaw/workspace-storyteller/data/publication-published</string>
+  </dict>
   <key>RunAtLoad</key>
   <true/>
   <key>StartInterval</key>
@@ -15,8 +24,8 @@
   <key>ProcessType</key>
   <string>Background</string>
   <key>StandardOutPath</key>
-  <string>/Users/djstd/Documents/Openclaw/storykeeper-workspace/data/logs/publication.log</string>
+  <string>/Users/djstd/.openclaw/workspace-storyteller/data/logs/publication.log</string>
   <key>StandardErrorPath</key>
-  <string>/Users/djstd/Documents/Openclaw/storykeeper-workspace/data/logs/publication-error.log</string>
+  <string>/Users/djstd/.openclaw/workspace-storyteller/data/logs/publication-error.log</string>
 </dict>
 </plist>
