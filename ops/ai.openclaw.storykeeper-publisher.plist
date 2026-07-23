@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>ai.openclaw.storykeeper-publisher</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/djstd/Documents/Openclaw/storykeeper-library/ops/publish-queue.sh</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StartInterval</key>
+  <integer>60</integer>
+  <key>ProcessType</key>
+  <string>Background</string>
+  <key>StandardOutPath</key>
+  <string>/Users/djstd/Documents/Openclaw/storykeeper-workspace/data/logs/publication.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/djstd/Documents/Openclaw/storykeeper-workspace/data/logs/publication-error.log</string>
+</dict>
+</plist>
