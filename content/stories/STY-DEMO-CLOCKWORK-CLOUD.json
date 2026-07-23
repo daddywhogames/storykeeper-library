@@ -1,0 +1,20 @@
+{
+  "id": "STY-DEMO-CLOCKWORK-CLOUD",
+  "title": "The Clockwork Cloud",
+  "publishedAt": "2026-07-23",
+  "summary": "Lina races through Skyport to calm a runaway weather machine—and discovers that slowing down can be the fastest way forward.",
+  "purpose": "Patience helps us solve hard problems.",
+  "heroes": ["Lina"],
+  "villains": ["The Mist"],
+  "tags": ["invention", "clouds", "patience", "magic-science"],
+  "readingMinutes": 10,
+  "accent": "sun",
+  "symbol": "⏰",
+  "body": [
+    "High above the sleepy rooftops, Skyport's clouds were polished every morning until they shone like silver pillows. Lina loved watching the cloud-keepers work, especially when their brass weather machine clicked, hummed, and painted rainbows across the dawn.",
+    "But today the machine sneezed. It spun too fast, swallowed three clouds, and puffed out a fog shaped like a grumpy dragon. Inside the fog, the Mist chuckled. Lina grabbed her tool satchel and hurried toward the tower.",
+    "Every lever she pulled made the machine spin faster. Then Lina remembered her grandmother's advice: when a puzzle runs ahead of you, stop chasing and listen. She closed her eyes. Beneath the clatter she heard one tiny gear tapping out of rhythm.",
+    "Lina waited for the right moment, slipped the gear gently into place, and the tower gave a happy sigh. The dragon-fog dissolved into silver raindrops. Even the Mist had to admit that patience was a surprisingly powerful kind of magic.",
+    "That evening, Skyport's clouds glowed peach and gold. Lina wrote a new label for her tool satchel: Slow hands. Sharp eyes. Brave heart."
+  ]
+}

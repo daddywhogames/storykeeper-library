@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#fbf2df">
+  <meta name="description" content="A cozy library of magical science adventures for young readers.">
+  <title>Storykeeper Library</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#library">Skip to stories</a>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Storykeeper Library home"><span aria-hidden="true">✦</span> Storykeeper</a>
+    <nav aria-label="Reading tools">
+      <button id="themeButton" class="round-button" type="button" aria-label="Switch to bedtime colors" title="Bedtime colors">☾</button>
+      <button id="favoritesButton" class="pill-button" type="button" aria-pressed="false">♡ Favorites</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="welcome-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Stories made together</p>
+        <h1 id="welcome-title">Every story opens a little door.</h1>
+        <p>Curl up, choose an adventure, and meet brave heroes who discover big ideas in wonderfully unexpected places.</p>
+        <div class="hero-actions">
+          <button id="featuredButton" class="primary" type="button">▶ Read today’s story</button>
+          <button id="surpriseButton" class="secondary" type="button">✦ Surprise me</button>
+        </div>
+      </div>
+      <div class="paper-world" aria-hidden="true">
+        <div class="sun"></div><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div>
+        <div class="clock"><span></span></div><div class="reader"><i></i></div><div class="book"></div>
+        <div class="hill hill-back"></div><div class="hill hill-front"></div><div class="stars">✦　·　✦</div>
+      </div>
+    </section>
+
+    <section id="library" class="library" aria-labelledby="library-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">Pick one, get cozy, and begin</p><h2 id="library-title">Stories waiting on the shelf</h2></div>
+        <p id="resultCount" aria-live="polite"></p>
+      </div>
+      <div class="filters" role="search">
+        <label class="search"><span aria-hidden="true">⌕</span><span class="sr-only">Search stories</span><input id="searchInput" type="search" placeholder="Search heroes, lessons, magic…" autocomplete="off"></label>
+        <div id="tagFilters" class="tag-filters" aria-label="Filter by theme"></div>
+      </div>
+      <div id="storyGrid" class="story-grid" aria-live="polite"></div>
+      <div id="emptyState" class="empty" hidden><span aria-hidden="true">☁</span><h3>No stories hiding here yet</h3><p>Try another word or clear the filters.</p><button id="clearButton" class="secondary" type="button">Clear filters</button></div>
+    </section>
+
+    <section class="universe-strip" aria-label="About the universe">
+      <p class="eyebrow">The shared universe</p>
+      <h2>Magic sparks. Science whirs. Courage grows.</h2>
+      <p>Each adventure joins a growing world built by storytellers together—one hero, puzzle, and surprising idea at a time.</p>
+    </section>
+  </main>
+
+  <footer><p>Made for curious readers ages 6–9. No tracking, advertising, or accounts.</p></footer>
+
+  <dialog id="readerDialog" aria-labelledby="readerTitle">
+    <article class="reader-panel">
+      <header class="reader-header">
+        <button id="closeReader" class="round-button" type="button" aria-label="Close story">×</button>
+        <div class="reader-tools">
+          <button id="smallerText" type="button" aria-label="Make text smaller">A−</button>
+          <button id="largerText" type="button" aria-label="Make text larger">A+</button>
+          <button id="listenButton" type="button">▶ Listen</button>
+          <button id="readerFavorite" type="button" aria-pressed="false">♡ Save</button>
+        </div>
+      </header>
+      <div class="reader-content">
+        <p id="readerMeta" class="eyebrow"></p><h2 id="readerTitle"></h2><p id="readerPurpose" class="lesson"></p><div id="readerBody"></div><p class="the-end">The End ✦</p>
+      </div>
+      <div class="progress-track" aria-hidden="true"><span id="readingProgress"></span></div>
+    </article>
+  </dialog>
+</body>
+</html>

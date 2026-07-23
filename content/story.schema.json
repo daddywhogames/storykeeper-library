@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Public Storykeeper Story",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "title", "publishedAt", "summary", "purpose", "heroes", "villains", "tags", "readingMinutes", "accent", "symbol", "body"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^STY-[A-Z0-9-]+$"},
+    "title": {"type": "string", "minLength": 1, "maxLength": 120},
+    "publishedAt": {"type": "string", "format": "date"},
+    "summary": {"type": "string", "minLength": 1, "maxLength": 320},
+    "purpose": {"type": "string", "maxLength": 160},
+    "heroes": {"type": "array", "items": {"type": "string", "maxLength": 60}, "maxItems": 8},
+    "villains": {"type": "array", "items": {"type": "string", "maxLength": 60}, "maxItems": 8},
+    "tags": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9-]+$"}, "maxItems": 16},
+    "readingMinutes": {"type": "integer", "minimum": 1, "maximum": 30},
+    "accent": {"enum": ["sun", "coral", "mint", "moon", "sky", "plum"]},
+    "symbol": {"type": "string", "minLength": 1, "maxLength": 8},
+    "body": {"type": "array", "items": {"type": "string", "minLength": 1, "maxLength": 1800}, "minItems": 1, "maxItems": 120}
+  }
+}
