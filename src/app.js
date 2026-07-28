@@ -4,7 +4,7 @@ const colors = { sun:'#f5bd55',coral:'#df7068',mint:'#78a18a',moon:'#65769e',sky
 const escapeHtml = (text) => String(text).replace(/[&<>"]/g,(char)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[char]));
 
 async function loadStories(){
-  const response = await fetch('./data/stories.json');
+  const response = await fetch(`./data/stories.json?v=${Date.now()}`, { cache: 'no-store' });
   if(!response.ok) throw new Error('Story shelf unavailable');
   state.stories = await response.json();
   renderTags(); renderStories();
