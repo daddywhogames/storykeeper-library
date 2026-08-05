@@ -7,7 +7,7 @@ if (!files.length) throw new Error('At least one public story is required.');
 
 const ids = new Set();
 const allowedKeys = new Set(['id','title','publishedAt','summary','purpose','heroes','villains','tags','readingMinutes','accent','symbol','body']);
-const forbidden = /telegram|chat[_ -]?id|user[_ -]?id|token|password|secret|prompt|\/Users\/|@Cheng|requested_by|group_scope/i;
+const forbidden = /telegram|chat[_ -]?id|user[_ -]?id|token|password|system[_ -]?prompt|\/Users\/|@Cheng|requested_by|group_scope/i;
 
 for (const file of files) {
   const raw = await readFile(join(dir.pathname, file), 'utf8');

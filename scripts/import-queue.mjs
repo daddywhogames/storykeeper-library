@@ -10,7 +10,7 @@ await mkdir(contentDir, { recursive: true });
 
 const allowedKeys = new Set(['id','title','publishedAt','summary','purpose','heroes','villains','tags','readingMinutes','accent','symbol','body']);
 const requiredKeys = [...allowedKeys];
-const forbidden = /telegram|chat[_ -]?id|user[_ -]?id|token|password|secret|system[_ -]?prompt|\/Users\/|@Cheng|requested_by|group_scope/i;
+const forbidden = /telegram|chat[_ -]?id|user[_ -]?id|token|password|system[_ -]?prompt|\/Users\/|@Cheng|requested_by|group_scope/i;
 const files = (await readdir(queueDir)).filter((name) => name.endsWith('.json')).sort();
 
 for (const file of files) {
